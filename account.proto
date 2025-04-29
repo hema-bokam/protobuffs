@@ -1,5 +1,8 @@
 syntax = "proto3";
 
+//pascal case notation for enums, services
+//snake case for field names
+//UPPER snake case for enum values
 enum EyeColor{
     EYE_COLOR_UNSPECIFIED = 0; //for enums smallest posisble tag is 0
     EYE_COLOR_BLACK = 1;
@@ -13,7 +16,7 @@ message Account{
     int32 id = 1;
     string name = 2;
     bytes thumbnail = 3; // pic in .jpeg
-    bool isAccVerified = 4;
-    repeated string phonenums = 5; //like arrays can hold 0 or more values of same type
+    bool is_acc_verified = 4;
+    repeated string phone_nums = 5; //like arrays can hold 0 or more values of same type
 
 }
