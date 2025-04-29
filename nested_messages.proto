@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+message UserProfile {
+  
+  message Address {
+    string street = 1;
+    string city = 2;
+    string state = 3;
+    string zipcode = 4;
+  }
+  //similarly we can create enums as well 
+  
+  int32 user_id = 1;
+  string username = 2;
+  string email = 3;
+  Address address = 4;  
+}

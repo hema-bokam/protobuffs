@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+message UserProfile {
+    string username = 1;
+    string email = 2;
+}
+
+enum VerificationStatus {
+    VERIFICATION_STATUS_UNSPECIFIED = 0;
+    VERIFIED = 1;
+    PENDING = 2;
+    REJECTED = 3;
+}
+
+message GetUserProfileResponse {
+    UserProfile profile = 1;
+    VerificationStatus verification_status = 2;
+}
