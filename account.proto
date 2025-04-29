@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+enum EyeColor{
+    EYE_COLOR_UNSPECIFIED = 0; //for enums smallest posisble tag is 0
+    EYE_COLOR_BLACK = 1;
+    EYE_COLOR_BROWN = 2;
+    EYE_COLOR_BLUE = 3;
+}
+/*  every field in the message should have a tag/unique identifier 
+    to encode and decode data efficiently. 
+*/
+message Account{
+    int32 id = 1;
+    string name = 2;
+    bytes thumbnail = 3; // pic in .jpeg
+    bool isAccVerified = 4;
+    repeated string phonenums = 5; //like arrays can hold 0 or more values of same type
+
+}
